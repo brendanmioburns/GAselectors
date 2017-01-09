@@ -1,0 +1,68 @@
+/*element selector*/
+a {
+  color:blue;
+  font-size:1em;
+  text-decoration:none;
+}
+
+/*psuedo-class selector*/
+a:hover {
+  font-size:2em;
+  color:red;
+
+}
+
+.hover-div {
+  width:300px;
+  height:300px;
+  background-color:red;
+}
+/*!important takes precedence over anything else*/
+/*style in html is next*/
+/*id is next*/
+/*class is next*/
+
+/*:hover overrides*/
+.hover-div:hover {
+  background-color:blue;
+}
+
+
+.nested-container div {
+  border:red 1px solid;
+  width:200px;
+  height:200px;
+}
+
+/*nested selector*/
+  /*class*/
+    /*filtering again*/
+.nested-container div:nth-child(odd) {
+  background-color:orange;
+}
+
+.grocery-list li {
+  color:#000;
+}
+
+/*direct descendant selector, telling what's "below" to change*/
+.grocery-list > li > ul > li {
+  color:red;
+}
+
+/*telling CSS to look for an attribute*/
+input[name="email"] {
+  width:300px;
+}
+
+input[name="address"] {
+  width:500px;
+}
+
+a[href="http://google.com"] {
+  color:green;
+}
+
+a[href="http://yahoo.com"] {
+  color:brown;
+}
